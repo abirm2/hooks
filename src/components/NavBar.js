@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar,Container,Nav,NavDropdown} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom'
 function NavBar() {
     return (
         <div className='nav'>
@@ -9,15 +10,14 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-            <Nav.Link href="#home">ShOFTN</Nav.Link>
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Movie</Nav.Link>
-              <NavDropdown title="" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Romance</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">comédie</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">drama</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">crime</NavDropdown.Item>
+            <Nav.Link as={Link} to ='/'> Home</Nav.Link>
+            <Nav.Link  as={Link}   to='/film' >Movies</Nav.Link>
+              <NavDropdown  title="" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link}to="/romance">Romance</NavDropdown.Item>
+                <NavDropdown.Item as={Link}to="/Action">Action</NavDropdown.Item>
+                <NavDropdown.Item as={Link}to="/Comedie">comédie</NavDropdown.Item>
+                <NavDropdown.Item as={Link}to="/Drama">drama</NavDropdown.Item>
+                <NavDropdown.Item as={Link}to="/Crime">crime</NavDropdown.Item>
               </NavDropdown>
               
             </Nav>
