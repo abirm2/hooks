@@ -15,7 +15,7 @@ import Gone from './images/Gone.jpg'
 import Rating from './components/rating'
 import HomePage from './components/HomePage.js'
 import {Route} from 'react-router-dom';
-
+import Trailer from './components/Trailer.js'
 function App() {
   const [Movies, setMovies]=useState([ { id : 1,title:'Hard love', description :'chrismats movie ,love and drama', posterURL:hard,rating:'2',trailerlink:'https://youtu.be/3boMRfx6cjE'},
     { id:2,title:'Now yousee ', description :'action , adventeur, drama', posterURL:see,rating:'2', trailerlink:''} ,
@@ -35,7 +35,7 @@ const [rating,setRating]=useState('');
        <Nav/>
        <Search  setSearch={setSearch}/>
     <Route path='/film' render ={()=>( <MovieCard Movies={Movies} search={search} rating={rating}></MovieCard>)} />
-    
+    <Route path='/trailer/:id' render ={(props)=><Trailer Movies={Movies}{...props}/>}/>
     <Add Movies={Movies} setMovies={setMovies} />
     <Rating   setRating={setRating} />
   
