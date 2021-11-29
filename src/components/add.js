@@ -13,7 +13,7 @@ function Add({Movies,setMovies}) {
   const Add=()=>setMovies( [...Movies,{title,description,poster,rating }])
   return (
     < div className='add'>
-      <Button variant="primary" onClick={handleShow}>
+      <Button className='plus' variant="primary" onClick={handleShow}>
         ADD MOVIE
       </Button>
 

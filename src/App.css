@@ -8,7 +8,8 @@ padding:200px;
 
 }
 .nav{
-  background-color: violet;
+  background-color: gray;
+  color: black;
   position: sticky;
   top: 0;
 
@@ -22,3 +23,10 @@ padding:200px;
   justify-content: center;
 }
 
+.home{
+  color:rgb(0, 110, 255);
+  text-align: center;
+}
+.plus{
+  background-color: gray;
+}

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Search({setSearch}) {
     return (
         <div>
-              <Form className="d-flex">
+              <Form  className="d-flex">
         <FormControl
           type="search"
           placeholder="Search"

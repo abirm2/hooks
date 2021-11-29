@@ -2,8 +2,9 @@ import React from 'react'
 
 function HomePage() {
     return (
-        <div>
-            <h1>welcome to ShofTN</h1>
+        <div className="home">
+            <h1>Welcome To ShofTN</h1>
+            
         </div>
     )
 }

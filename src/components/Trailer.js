@@ -6,8 +6,11 @@ function Trailer(props) {
     
     return (
         <div>
-            <h1>{Tr.trailerlink}</h1>
+            <h1>{Tr.title}</h1>
             <h1>{Tr.description }</h1>
+            <iframe src={Tr.trailerlink }alt ="/"></iframe>
+            <button onClick={()=>props.history.goBack()}>GOBACK</button>
+            <button onClick={()=>props.history.push('/')}>home</button>
         </div>
     )
 }
